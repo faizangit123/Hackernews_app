@@ -8,7 +8,7 @@ const scrapeHackerNews = async () => {
   try {
     console.log('🔄 Starting HackerNews scrape...');
 
-    // Step 1: Fetch the HTML page
+    // Fetch the HTML page
     const { data } = await axios.get(HN_URL, {
       headers: {
         'User-Agent':
@@ -17,12 +17,12 @@ const scrapeHackerNews = async () => {
       },
     });
 
-    // Step 2: Load HTML into cheerio (like loading into a virtual browser)
+    // Load HTML into cheerio 
     const $ = cheerio.load(data);
 
     const stories = [];
 
-    // Step 3: Find all story rows (each has class "athing")
+    // Find all story rows (each has class "athing")
     const storyRows = $('.athing').slice(0, 10);
 
     storyRows.each((index, element) => {
@@ -36,7 +36,7 @@ const scrapeHackerNews = async () => {
 
       // ---- Get Points ----
       const pointsText = subtextRow.find('.score').text();
-      // pointsText looks like "342 points" — we extract just the number
+      // pointsText looks like "342 points" 
       const points = parseInt(pointsText) || 0;
 
       // ---- Get Author ----
@@ -53,7 +53,7 @@ const scrapeHackerNews = async () => {
 
     console.log(`✅ Scraped ${stories.length} stories from HackerNews`);
 
-    // Step 4: Clear old stories from DB and save new ones
+    // Clear old stories from DB and save new ones
     await Story.deleteMany({});
     console.log('🗑️  Cleared old stories from database');
 

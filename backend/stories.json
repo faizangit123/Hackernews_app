@@ -1,0 +1,96 @@
+{
+  "scrapedAt": "2026-05-07T12:50:59.425Z",
+  "count": 10,
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Valve releases Steam Controller CAD files under Creative Commons license",
+      "url": "https://www.digitalfoundry.net/news/2026/05/valve-releases-steam-controller-cad-files-under-creative-commons-license",
+      "points": 1514,
+      "author": "haunter",
+      "postedAt": "20 hours ago",
+      "comments": 496
+    },
+    {
+      "rank": 2,
+      "title": "Appearing productive in the workplace",
+      "url": "https://nooneshappy.com/article/appearing-productive-in-the-workplace/",
+      "points": 1276,
+      "author": "diebillionaires",
+      "postedAt": "19 hours ago",
+      "comments": 510
+    },
+    {
+      "rank": 3,
+      "title": "Boris Cherny: TI-83 Plus Basic Programming Tutorial (2004)",
+      "url": "https://www.ticalc.org/programming/columns/83plus-bas/cherny/",
+      "points": 48,
+      "author": "suoken",
+      "postedAt": "4 hours ago",
+      "comments": 17
+    },
+    {
+      "rank": 4,
+      "title": "SQLite Is a Library of Congress Recommended Storage Format",
+      "url": "https://sqlite.org/locrsf.html",
+      "points": 341,
+      "author": "whatisabcdefgh",
+      "postedAt": "14 hours ago",
+      "comments": 90
+    },
+    {
+      "rank": 5,
+      "title": "Permacomputing Principles",
+      "url": "https://permacomputing.net/principles/",
+      "points": 173,
+      "author": "andsoitis",
+      "postedAt": "9 hours ago",
+      "comments": 83
+    },
+    {
+      "rank": 6,
+      "title": "Agent-harness-kit scaffolding for multi-agent workflows (MCP, provider-agnostic)",
+      "url": "https://ahk.cardor.dev",
+      "points": 14,
+      "author": "enmanuelmag",
+      "postedAt": "1 hour ago",
+      "comments": 3
+    },
+    {
+      "rank": 7,
+      "title": "GovernGPT (YC W24) Is Hiring Engineers to Build Thinking Systems in Montreal",
+      "url": "https://www.ycombinator.com/companies/governgpt/jobs/hRyltS0-backend-engineer-thinking-systems",
+      "points": 0,
+      "author": "unknown",
+      "postedAt": "16 minutes ago",
+      "comments": 16
+    },
+    {
+      "rank": 8,
+      "title": "ZAYA1-8B: An 8B Moe Model with 760M Active Params Matching DeepSeek-R1 on Math",
+      "url": "https://firethering.com/zaya1-8b-open-source-math-coding-model/",
+      "points": 34,
+      "author": "steveharing1",
+      "postedAt": "3 hours ago",
+      "comments": 29
+    },
+    {
+      "rank": 9,
+      "title": "Diskless Linux boot using ZFS, iSCSI and PXE",
+      "url": "https://aniket.foo/posts/20260505-netboot/",
+      "points": 115,
+      "author": "stereo-highway",
+      "postedAt": "9 hours ago",
+      "comments": 61
+    },
+    {
+      "rank": 10,
+      "title": "Photoshop's challenges with focus, pt. 2",
+      "url": "https://unsung.aresluna.org/photoshops-challenges-with-focus-pt-2/",
+      "points": 68,
+      "author": "frizlab",
+      "postedAt": "5 hours ago",
+      "comments": 21
+    }
+  ]
+}
