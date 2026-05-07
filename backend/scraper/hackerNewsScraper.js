@@ -28,6 +28,7 @@ const scrapeHackerNews = async () => {
     storyRows.each((index, element) => {
       // ---- Get Title and URL ----
       const titleElement = $(element).find('.titleline > a').first();
+      const rank = parseInt() || 0
       const title = titleElement.text().trim();
       const url = titleElement.attr('href') || '';
 
