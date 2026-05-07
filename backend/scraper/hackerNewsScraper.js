@@ -8,7 +8,7 @@ const scrapeHackerNews = async () => {
   try {
     console.log('🔄 Starting HackerNews scrape...');
 
-    // Fetch the HTML page
+    //1) Fetch the HTML page
     const { data } = await axios.get(HN_URL, {
       headers: {
         'User-Agent':
@@ -17,12 +17,12 @@ const scrapeHackerNews = async () => {
       },
     });
 
-    // Load HTML into cheerio 
+    //2) Load HTML into cheerio 
     const $ = cheerio.load(data);
 
     const stories = [];
 
-    // Find all story rows (each has class "athing")
+    //3) Find all story rows (each has class "athing")
     const storyRows = $('.athing').slice(0, 10);
 
     storyRows.each((index, element) => {
@@ -45,7 +45,7 @@ const scrapeHackerNews = async () => {
       // ---- Get Posted Time ----
       const postedAt = subtextRow.find('.age').text().trim() || '';
 
-      // Only add story if it has a title
+      //4) Only add story if it has a title
       if (title) {
         stories.push({ title, url, points, author, postedAt });
       }
@@ -53,9 +53,9 @@ const scrapeHackerNews = async () => {
 
     console.log(`✅ Scraped ${stories.length} stories from HackerNews`);
 
-    // Clear old stories from DB and save new ones
+    //5) Clear old stories from DB and save new ones
     await Story.deleteMany({});
-    console.log('🗑️  Cleared old stories from database');
+    console.log('🗑️ Cleared old stories from database');
 
     await Story.insertMany(stories);
     console.log('💾 New stories saved to database');
