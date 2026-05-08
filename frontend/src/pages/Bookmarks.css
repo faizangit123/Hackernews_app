@@ -1,0 +1,142 @@
+.bookmarks-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* ---- HEADER ---- */
+.bookmarks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.bookmarks-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.2rem;
+}
+
+.bookmarks-subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 500;
+}
+
+/* ---- ERROR ---- */
+.bookmarks-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdecea;
+  color: #c0392b;
+  padding: 0.85rem 1.1rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #c0392b;
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.bookmarks-error button {
+  background: none;
+  border: 1.5px solid #c0392b;
+  color: #c0392b;
+  padding: 0.25rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.bookmarks-error button:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+/* ---- LOADING ---- */
+.bookmarks-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 1rem;
+  color: #888;
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #f0f0f0;
+  border-top-color: #ff6600;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.bookmarks-loading p {
+  font-size: 0.95rem;
+  color: #999;
+}
+
+/* ---- LIST ---- */
+.bookmarks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* ---- EMPTY STATE ---- */
+.bookmarks-empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #888;
+}
+
+.bookmarks-empty .empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.bookmarks-empty .empty-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.bookmarks-empty .empty-subtext {
+  font-size: 0.92rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+.bookmarks-empty .empty-subtext a {
+  color: #ff6600;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bookmarks-empty .empty-subtext a:hover {
+  text-decoration: underline;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+  .bookmarks-container {
+    padding: 1.2rem 1rem 2rem;
+  }
+
+  .bookmarks-title {
+    font-size: 1.4rem;
+  }
+}
