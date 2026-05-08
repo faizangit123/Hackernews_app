@@ -4,8 +4,16 @@ A full-stack web application built with the **MERN stack** (MongoDB, Express, Re
 
 ---
 
-## 📌 Table of Contents
+## 🌐 Live Demo
 
+| Service | URL |
+|---------|-----|
+| **Frontend** | https://hackernews-app.vercel.app/ |
+| **Backend API** | https://hackernews-app.onrender.com/api/stories |
+
+---
+
+## 📌 Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
