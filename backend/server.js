@@ -31,6 +31,10 @@ app.use(
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('HackerNews API is running.');
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/scrape', scrapeRoutes);
 app.use('/api/stories', storyRoutes);

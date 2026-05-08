@@ -1,10 +1,8 @@
 import { createContext, useContext, useState } from 'react';
 import API from '../api/axios';
 
-// Step 1: Create the context object
 const AuthContext = createContext();
 
-// Step 2: Create the Provider component
 export const AuthProvider = ({ children }) => {
   // Initialize user from localStorage so login persists on refresh
   const [user, setUser] = useState(() => {
@@ -76,7 +74,6 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// Step 3: Custom hook for easy access
 export const useAuth = () => {
   return useContext(AuthContext);
 };
