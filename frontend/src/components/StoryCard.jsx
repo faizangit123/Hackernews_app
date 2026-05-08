@@ -22,7 +22,6 @@ const StoryCard = ({ story, rank, isBookmarked, onBookmarkChange }) => {
       const { data } = await API.post(`/stories/${story._id}/bookmark`);
       setBookmarked(data.bookmarked);
 
-      // Notify parent component about the change
       if (onBookmarkChange) {
         onBookmarkChange(story._id, data.bookmarked);
       }
@@ -39,7 +38,6 @@ const StoryCard = ({ story, rank, isBookmarked, onBookmarkChange }) => {
     }
   };
 
-  // Format points display
   const formatPoints = (points) => {
     if (points >= 1000) return `${(points / 1000).toFixed(1)}k`;
     return points;
@@ -68,11 +66,11 @@ const StoryCard = ({ story, rank, isBookmarked, onBookmarkChange }) => {
           {story.title}
           </a>
       
-        {story.url && (
+        {story.url && story.url.startsWith('http') && (
           <span className="story-domain">
-            ({new URL(story.url).hostname.replace('www.', '')})
+          ({new URL(story.url).hostname.replace('www.', '')})
           </span>
-        )}
+          )}
 
         <div className="story-meta">
           <span className="meta-item">
