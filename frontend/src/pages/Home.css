@@ -1,0 +1,285 @@
+.home-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* ---- HEADER ---- */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.home-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.2rem;
+}
+
+.home-subtitle {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.home-subtitle a {
+  color: #ff6600;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-subtitle a:hover {
+  text-decoration: underline;
+}
+
+/* ---- SCRAPE BUTTON ---- */
+.scrape-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #ff6600;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.scrape-btn:hover:not(:disabled) {
+  background-color: #e05500;
+  transform: translateY(-1px);
+}
+
+.scrape-btn:disabled {
+  background-color: #ffb380;
+  cursor: not-allowed;
+}
+
+/* ---- LOADING SPINNER ---- */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- ERROR ---- */
+.home-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdecea;
+  color: #c0392b;
+  padding: 0.85rem 1.1rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #c0392b;
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.home-error button {
+  background: none;
+  border: 1.5px solid #c0392b;
+  color: #c0392b;
+  padding: 0.25rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.home-error button:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+/* ---- SKELETON LOADING ---- */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.skeleton-card {
+  display: flex;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.skeleton-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+  min-width: 48px;
+}
+
+.skeleton-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skeleton-box {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-rank { height: 14px; width: 28px; }
+.skeleton-points { height: 36px; width: 44px; border-radius: 8px; }
+.skeleton-title { height: 16px; width: 100%; }
+.skeleton-title.short { width: 60%; }
+.skeleton-meta { height: 12px; width: 55%; }
+
+/* ---- STORIES LIST ---- */
+.stories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* ---- PAGINATION ---- */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border: 1.5px solid #ddd;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+  transition: all 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: #ff6600;
+  color: #ff6600;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-num {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #ddd;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.page-num:hover {
+  border-color: #ff6600;
+  color: #ff6600;
+}
+
+.page-num.active {
+  background-color: #ff6600;
+  border-color: #ff6600;
+  color: #ffffff;
+}
+
+/* ---- EMPTY STATE ---- */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #888;
+}
+
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.empty-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.empty-subtext {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 1.2rem 1rem 2rem;
+  }
+
+  .home-title {
+    font-size: 1.4rem;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scrape-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pagination {
+    gap: 0.5rem;
+  }
+
+  .page-btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.82rem;
+  }
+}
