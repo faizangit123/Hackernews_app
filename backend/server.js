@@ -11,11 +11,9 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/scrape', scrapeRoutes);
 app.use('/api/stories', storyRoutes);
@@ -27,7 +25,6 @@ connectDB().then(async () => {
     console.log(`🚀 Server running on port ${PORT}`);
   });
 
-  // Auto-run scraper on server start
   try {
     console.log('⏳ Running initial scrape on server start...');
     await scrapeHackerNews();
